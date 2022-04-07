@@ -1,0 +1,530 @@
+/* основной цвет текста #757575 */
+/* вторичный цвет текста #212121 */
+/* служебный цвет текста rgba(255, 255, 255, 0.6) */
+/* белый #FFFFFF */
+/* акцент #2196F3 */
+
+/* вторичный цвет фона #F5F4FA */
+/* цвет фона служебный #2F303A */
+
+:root {
+    --primary-text-color: #757575;
+    --secondary-text-color: #212121;
+    --service-text-color: rgba(255, 255, 255, 0.6);
+    --accent-color: #2196F3;
+    --secondary-font-color: #F5F4FA;
+    --service-font-color: #2F303A;
+    --white-color: #FFFFFF;
+}
+
+/* --- */
+/* css for studio main page */
+/* --- */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: var(--white-color);
+    color: var(--primary-text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+/* убирает отображение значка пункта списка */
+.list-item {
+    list-style: none;
+}
+
+/* убирает подчеркивание ссылки */
+.portfolio-link,
+.contacts,
+.nav-link,
+.logo,
+.contacts-foter {
+    text-decoration: none;
+}
+
+.random-list,
+.nav-list,
+.contacts-list,
+.activities-list,
+.portfolio-list,
+.benefits-list
+.members-list {
+    margin: 0;
+    padding: 0;
+}
+
+/* убирает визуальное отображение заголовков секций */
+.hiden-title {
+    visibility: hidden;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* outline: 3px solid tomato; */
+}
+    
+
+/* шапка сайта */
+.page-header {
+    margin-bottom: 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+/* .header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    color: var(--accent-color);
+}
+
+.logo-black {
+    color: var(--secondary-text-color);
+}
+
+.logo,
+.logo-black,
+.logo-white {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+/* навигация по сайту */
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    margin-left: 93px;
+    padding-left: 0;
+}
+
+.nav-list li:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contacts-list {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-left: 0;
+}
+
+.contact-item {
+    margin-right: 50px;
+}
+
+.contact-item:last-child {
+    margin-right: 0px;
+}
+
+.contacts {
+    color: var(--primary-text-color);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.contacts:hover, .contacts:focus {
+    color: var(--accent-color);
+}
+
+.nav-link {
+    color: var(--secondary-text-color);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--accent-color);
+}
+
+.current {
+    color: var(--accent-color);
+}
+
+/* герой */
+.hero {
+    margin-bottom: 0px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-color: var(--service-font-color);
+    text-align: center;
+}
+
+.hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    color: var(--white-color);
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero-button {
+    margin: 0 auto;
+
+    padding: 10px 32px;
+    border-radius: 4px;
+
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    cursor: pointer;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    border: none;
+}
+
+.hero-button:hover, .hero-button:focus {
+    color: var(--secondary-text-color);
+}
+
+/* преимущества компании */
+.company-benefits {
+    margin-bottom: 0;
+    padding-top: 70px;
+    padding-bottom: 94px;
+}
+
+.benefits-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.benefits-card {
+    width: 270px;
+    height: 101px;
+}
+
+.benefits-list li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.benefits-list p {
+    margin-bottom: 0;
+}
+
+.benefits-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.title-color {
+    color: var(--secondary-text-color);
+}
+
+.benefits-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.benefits-description {
+    margin-top: 0;
+
+    line-height: 1.7;
+}
+
+/* направления деятельности компании */
+.company-activities {
+    margin: 0;
+    padding-bottom: 94px;
+}
+
+.activities-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.activities-list li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.activities-title,
+.team-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+/* наша команда */
+.company-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    background-color: var(--secondary-font-color);
+}
+
+.members-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.members-list li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.members-card {
+    margin: 0;
+    /* margin-top: 0; */
+    /* margin-bottom: 30px; */
+    padding-bottom: 30px;
+
+    background-color: var(--white-color);
+          
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* .members-card:last-child {
+    margin-bottom: 0;
+} */
+
+.company-member {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+.members-photo {
+    margin-top: 0;
+    margin-bottom: 30px;
+    
+}
+
+.speciality {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+/* подвал сайта */
+.footer {
+    margin-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--service-font-color);
+}
+
+.footer a {
+    margin-bottom: 20px;
+}
+
+.address {
+    line-height: 1.7;
+    font-style: normal;
+}
+
+.address li {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.address li:last-child {
+    margin-bottom: 0;
+}
+
+.logo-white {
+    color: white;
+}
+
+.post-address {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: white;
+}
+
+.contacts-foter {
+    color: var(--service-text-color);
+}
+
+.contacts-foter:hover, .contacts-foter:focus {
+    color: var(--accent-color);
+}
+
+/* --- */
+/* css for poprtfolio page */
+/* --- */
+
+.portfolio-page {
+    padding-top: 69px;
+    padding-bottom: 94px;
+}
+
+.buttons-list {
+    margin-bottom: 50px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-list li:not(:last-child) {
+    margin-right: 8px;
+}
+
+/* фильтр-кнопки */
+.filter-button {
+    background-color: var(--secondary-font-color);
+    color: var(--secondary-text-color);
+    cursor: pointer;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    height: 38px;
+    width: 130px;
+    left: 976px;
+    top: 260px;
+    border-radius: 4px;
+    border: none;
+}
+
+/* перечень выполненных проектов */
+.filter-button:hover, .filter-button:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+.portfolio-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 0;
+}
+
+.portfolio-card {
+    border: 1px solid #EEEEEE;
+    margin-bottom: 30px;
+}
+
+.portfolio-card:nth-child(n+6) {
+    margin-bottom: 0;
+}
+
+.img-description {
+    padding: 20px 24px;
+}
+
+.portfolio-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.portfolio-link {
+    color: var(--secondary-text-color);
+}
+
+.portfolio-link:hover, .portfolio-link:focus {
+    color: var(--accent-color);
+}
+
+.project-name {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.project-description {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--primary-text-color);
+}
+
+/* .project-description:last-child {
+    margin-bottom: 0;
+} */
