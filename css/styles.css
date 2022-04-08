@@ -33,6 +33,7 @@ html {
 
 body {
     margin: 0;
+
     background-color: var(--white-color);
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
@@ -54,13 +55,15 @@ body {
     text-decoration: none;
 }
 
-.random-list,
+/* убирает отступы у списков */
 .nav-list,
+.footer-list,
 .contacts-list,
 .activities-list,
 .portfolio-list,
-.benefits-list
-.members-list {
+.benefits-list,
+.members-list,
+.buttons-list {
     margin: 0;
     padding: 0;
 }
@@ -87,17 +90,20 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
 
-/* .header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */
+    border-bottom: 1px solid #ECECEC;
+}
 
 .main-nav {
     display: flex;
     align-items: center;
+}
+
+.main-nav > .logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .header-container {
@@ -108,6 +114,7 @@ body {
 
 .logo {
     display: inline-block;
+    
     color: var(--accent-color);
 }
 
@@ -126,10 +133,10 @@ body {
 }
 
 /* навигация по сайту */
-
 .nav-list {
     display: flex;
     justify-content: center;
+
     margin-left: 93px;
     padding-left: 0;
 }
@@ -154,10 +161,10 @@ body {
 }
 
 .contacts {
-    color: var(--primary-text-color);
-
     padding-top: 8px;
     padding-bottom: 8px;
+
+    color: var(--primary-text-color);
 }
 
 .contacts:hover, .contacts:focus {
@@ -165,10 +172,10 @@ body {
 }
 
 .nav-link {
-    color: var(--secondary-text-color);
-
     padding-top: 8px;
     padding-bottom: 8px;
+
+    color: var(--secondary-text-color);
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -194,7 +201,6 @@ body {
     margin-bottom: 30px;
 
     color: var(--white-color);
-
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
@@ -205,14 +211,10 @@ body {
 
 .hero-button {
     margin: 0 auto;
-
     padding: 10px 32px;
-    border-radius: 4px;
 
     background-color: var(--accent-color);
     color: var(--white-color);
-    cursor: pointer;
-    
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
@@ -220,8 +222,10 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-
+    
     border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .hero-button:hover, .hero-button:focus {
@@ -237,24 +241,17 @@ body {
 
 .benefits-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     
     margin: 0;
     padding: 0;
 }
 
 .benefits-card {
-    width: 270px;
-    height: 101px;
+    width: calc((100% - 90px) / 4 );
 }
 
-.benefits-list li:not(:last-child) {
+.benefits-card:not(:last-child) {
     margin-right: 30px;
-}
-
-.benefits-list p {
-    margin-bottom: 0;
 }
 
 .benefits-title {
@@ -278,6 +275,7 @@ body {
 
 .benefits-description {
     margin-top: 0;
+    margin-bottom: 0;
 
     line-height: 1.7;
 }
@@ -329,27 +327,20 @@ body {
     padding: 0;
 }
 
-.members-list li:not(:last-child) {
-    margin-right: 30px;
-}
-
 .members-card {
     margin: 0;
-    /* margin-top: 0; */
-    /* margin-bottom: 30px; */
     padding-bottom: 30px;
 
     background-color: var(--white-color);
-          
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
-/* .members-card:last-child {
-    margin-bottom: 0;
-} */
+.members-card:not(:last-child) {
+    margin-right: 30px;
+}
 
 .company-member {
     margin-top: 0;
@@ -364,7 +355,6 @@ body {
 .members-photo {
     margin-top: 0;
     margin-bottom: 30px;
-    
 }
 
 .speciality {
@@ -430,24 +420,22 @@ body {
     padding-bottom: 94px;
 }
 
+/* фильтр-кнопки */
 .buttons-list {
-    margin-bottom: 50px;
-    padding: 0;
-
     display: flex;
     justify-content: center;
+
+    margin-bottom: 50px;
+    padding: 0;
 }
 
 .buttons-list li:not(:last-child) {
     margin-right: 8px;
 }
 
-/* фильтр-кнопки */
 .filter-button {
     background-color: var(--secondary-font-color);
     color: var(--secondary-text-color);
-    cursor: pointer;
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -462,6 +450,7 @@ body {
     top: 260px;
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 }
 
 /* перечень выполненных проектов */
@@ -472,24 +461,19 @@ body {
 
 .portfolio-list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center;
-
-    padding: 0;
 }
 
 .portfolio-card {
-    border: 1px solid #EEEEEE;
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
     margin-bottom: 30px;
+
+    border: 1px solid #EEEEEE;
 }
 
-.portfolio-card:nth-child(n+6) {
-    margin-bottom: 0;
-}
-
-.img-description {
-    padding: 20px 24px;
+.portfolio-card:nth-child(3n + 3) {
+    margin-right: 0;
 }
 
 .portfolio-title {
@@ -505,9 +489,15 @@ body {
     color: var(--accent-color);
 }
 
+.portfolio-link img {
+    margin-bottom: 20px;
+}
+
 .project-name {
     margin-top: 0;
     margin-bottom: 4px;
+    padding-right: 24px;
+    padding-left: 24px;
 
     font-weight: 700;
     font-size: 18px;
@@ -518,13 +508,11 @@ body {
 .project-description {
     margin-top: 0;
     margin-bottom: 0;
+    padding-right: 24px;
+    padding-left: 24px;
     padding-bottom: 20px;
 
+    color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.9;
-    color: var(--primary-text-color);
 }
-
-/* .project-description:last-child {
-    margin-bottom: 0;
-} */
