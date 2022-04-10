@@ -55,22 +55,19 @@ body {
     text-decoration: none;
 }
 
-/* убирает отступы у списков */
-.nav-list,
-.footer-list,
-.contacts-list,
-.activities-list,
-.portfolio-list,
-.benefits-list,
-.members-list,
-.buttons-list {
-    margin: 0;
-    padding: 0;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* убирает визуальное отображение заголовков секций */
 .hiden-title {
     visibility: hidden;
+}
+
+.title-color {
+    color: var(--secondary-text-color);
 }
 
 .container {
@@ -80,12 +77,14 @@ body {
     margin-right: auto;
     /* outline: 3px solid tomato; */
 }
-    
+
+h1, h2, h3, p, section, ul {
+    margin: 0;
+    padding: 0;
+}
 
 /* шапка сайта */
 .page-header {
-    margin-bottom: 0;
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -138,7 +137,6 @@ body {
     justify-content: center;
 
     margin-left: 93px;
-    padding-left: 0;
 }
 
 .nav-list li:not(:last-child) {
@@ -148,16 +146,10 @@ body {
 .contacts-list {
     display: flex;
     justify-content: flex-end;
-
-    padding-left: 0;
 }
 
-.contact-item {
+.contact-item:not(:last-child) {
     margin-right: 50px;
-}
-
-.contact-item:last-child {
-    margin-right: 0px;
 }
 
 .contacts {
@@ -188,7 +180,6 @@ body {
 
 /* герой */
 .hero {
-    margin-bottom: 0px;
     padding-top: 200px;
     padding-bottom: 200px;
 
@@ -197,7 +188,6 @@ body {
 }
 
 .hero-title {
-    margin-top: 0;
     margin-bottom: 30px;
 
     color: var(--white-color);
@@ -234,16 +224,12 @@ body {
 
 /* преимущества компании */
 .company-benefits {
-    margin-bottom: 0;
     padding-top: 70px;
     padding-bottom: 94px;
 }
 
 .benefits-list {
     display: flex;
-    
-    margin: 0;
-    padding: 0;
 }
 
 .benefits-card {
@@ -254,17 +240,7 @@ body {
     margin-right: 30px;
 }
 
-.benefits-title {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.title-color {
-    color: var(--secondary-text-color);
-}
-
 .benefits-name {
-    margin-top: 0;
     margin-bottom: 10px;
 
     font-size: 14px;
@@ -274,15 +250,11 @@ body {
 }
 
 .benefits-description {
-    margin-top: 0;
-    margin-bottom: 0;
-
     line-height: 1.7;
 }
 
 /* направления деятельности компании */
 .company-activities {
-    margin: 0;
     padding-bottom: 94px;
 }
 
@@ -290,9 +262,6 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
-    margin: 0;
-    padding: 0;
 }
 
 .activities-list li:not(:last-child) {
@@ -301,7 +270,6 @@ body {
 
 .activities-title,
 .team-title {
-    margin-top: 0;
     margin-bottom: 50px;
 
     font-weight: 700;
@@ -322,15 +290,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    margin: 0;
-    padding: 0;
 }
 
 .members-card {
-    margin: 0;
-    padding-bottom: 30px;
-
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -342,8 +304,11 @@ body {
     margin-right: 30px;
 }
 
+.members-data {
+    padding: 30px 60px;
+}
+
 .company-member {
-    margin-top: 0;
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -353,12 +318,11 @@ body {
 }
 
 .members-photo {
-    margin-top: 0;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .speciality {
-    margin: 0;
+    /* margin-bottom: 30px; */
 
     font-size: 16px;
     line-height: 1.19;
@@ -367,7 +331,6 @@ body {
 
 /* подвал сайта */
 .footer {
-    margin-bottom: 0;
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -383,13 +346,8 @@ body {
     font-style: normal;
 }
 
-.address li {
-    margin-top: 0;
+.address li:not(:last-child) {
     margin-bottom: 9px;
-}
-
-.address li:last-child {
-    margin-bottom: 0;
 }
 
 .logo-white {
@@ -397,9 +355,6 @@ body {
 }
 
 .post-address {
-    margin-top: 0;
-    margin-bottom: 0;
-
     color: white;
 }
 
@@ -426,7 +381,6 @@ body {
     justify-content: center;
 
     margin-bottom: 50px;
-    padding: 0;
 }
 
 .buttons-list li:not(:last-child) {
@@ -469,16 +423,11 @@ body {
     margin-right: 30px;
     margin-bottom: 30px;
 
-    border: 1px solid #EEEEEE;
+    /* border: 1px solid #EEEEEE; */
 }
 
 .portfolio-card:nth-child(3n + 3) {
     margin-right: 0;
-}
-
-.portfolio-title {
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .portfolio-link {
@@ -489,16 +438,16 @@ body {
     color: var(--accent-color);
 }
 
-.portfolio-link img {
+/* .portfolio-link img {
     margin-bottom: 20px;
+} */
+
+.project-text {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
 }
 
 .project-name {
-    margin-top: 0;
-    margin-bottom: 4px;
-    padding-right: 24px;
-    padding-left: 24px;
-
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -506,12 +455,6 @@ body {
 }
 
 .project-description {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-right: 24px;
-    padding-left: 24px;
-    padding-bottom: 20px;
-
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.9;
