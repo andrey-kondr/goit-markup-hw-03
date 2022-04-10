@@ -63,7 +63,14 @@ img {
 
 /* убирает визуальное отображение заголовков секций */
 .hiden-title {
-    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
 }
 
 .title-color {
@@ -224,7 +231,7 @@ h1, h2, h3, p, section, ul {
 
 /* преимущества компании */
 .company-benefits {
-    padding-top: 70px;
+    padding-top: 94px;
     padding-bottom: 94px;
 }
 
@@ -305,7 +312,7 @@ h1, h2, h3, p, section, ul {
 }
 
 .members-data {
-    padding: 30px 60px;
+    padding: 30px 50px;
 }
 
 .company-member {
@@ -317,13 +324,7 @@ h1, h2, h3, p, section, ul {
     text-align: center;
 }
 
-.members-photo {
-    /* margin-bottom: 30px; */
-}
-
 .speciality {
-    /* margin-bottom: 30px; */
-
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -371,7 +372,7 @@ h1, h2, h3, p, section, ul {
 /* --- */
 
 .portfolio-page {
-    padding-top: 69px;
+    padding-top: 94px;
     padding-bottom: 94px;
 }
 
@@ -422,8 +423,6 @@ h1, h2, h3, p, section, ul {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
-
-    /* border: 1px solid #EEEEEE; */
 }
 
 .portfolio-card:nth-child(3n + 3) {
@@ -437,10 +436,6 @@ h1, h2, h3, p, section, ul {
 .portfolio-link:hover, .portfolio-link:focus {
     color: var(--accent-color);
 }
-
-/* .portfolio-link img {
-    margin-bottom: 20px;
-} */
 
 .project-text {
     padding: 20px 24px;
